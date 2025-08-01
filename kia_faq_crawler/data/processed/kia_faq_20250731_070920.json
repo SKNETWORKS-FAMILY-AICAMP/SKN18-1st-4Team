@@ -1,0 +1,426 @@
+{
+  "metadata": {
+    "created_at": "2025-07-31 07:09:20",
+    "total_items": 52,
+    "source": "기아자동차 FAQ",
+    "version": "1.0"
+  },
+  "data": [
+    {
+      "category": "TOP 10",
+      "category_id": "category_1",
+      "question": "Kia Digital Key(NFC)란 무엇인가요?",
+      "answer": "Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드 키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스입니다.",
+      "question_id": "q_0_0",
+      "created_at": "2025-07-31 07:08:23"
+    },
+    {
+      "category": "TOP 10",
+      "category_id": "category_1",
+      "question": "직영 서비스센터 운영 시간은 어떻게 됩니까?",
+      "answer": "Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드 키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스입니다.",
+      "question_id": "q_0_1",
+      "created_at": "2025-07-31 07:08:24"
+    },
+    {
+      "category": "TOP 10",
+      "category_id": "category_1",
+      "question": "사용설명 분실했는데 어떻게 재발급 받을 수 있나요?",
+      "answer": "Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드 키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스입니다.",
+      "question_id": "q_0_2",
+      "created_at": "2025-07-31 07:08:24"
+    },
+    {
+      "category": "TOP 10",
+      "category_id": "category_1",
+      "question": "내 차 관리를 위한 필수 앱, MyKia는 어떤 서비스 인가요?",
+      "answer": "Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드 키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스입니다.",
+      "question_id": "q_0_3",
+      "created_at": "2025-07-31 07:08:25"
+    },
+    {
+      "category": "TOP 10",
+      "category_id": "category_1",
+      "question": "기아 통합 계정이 무엇인가요?",
+      "answer": "Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드 키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스입니다.",
+      "question_id": "q_0_4",
+      "created_at": "2025-07-31 07:08:26"
+    },
+    {
+      "category": "TOP 10",
+      "category_id": "category_1",
+      "question": "일반 리모컨 또는 스마트 키 차량의 핸들 락(잠김) 해제 방법을 알려주세요",
+      "answer": "Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드 키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스입니다.",
+      "question_id": "q_0_5",
+      "created_at": "2025-07-31 07:08:27"
+    },
+    {
+      "category": "TOP 10",
+      "category_id": "category_1",
+      "question": "전자식 파킹 브레이크(EPB) 기능이 무엇인가요?",
+      "answer": "Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드 키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스입니다.",
+      "question_id": "q_0_6",
+      "created_at": "2025-07-31 07:08:27"
+    },
+    {
+      "category": "TOP 10",
+      "category_id": "category_1",
+      "question": "버튼시동 스마트 키 차량의 경우 중립 주차는 어떻게 합니까?",
+      "answer": "Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드 키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스입니다.",
+      "question_id": "q_0_7",
+      "created_at": "2025-07-31 07:08:28"
+    },
+    {
+      "category": "TOP 10",
+      "category_id": "category_1",
+      "question": "스마트 키 배터리 교환방법에 대해 알려주세요",
+      "answer": "Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드 키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스입니다.",
+      "question_id": "q_0_8",
+      "created_at": "2025-07-31 07:08:29"
+    },
+    {
+      "category": "TOP 10",
+      "category_id": "category_1",
+      "question": "내비게이션 업데이트는 어디서, 어떻게 하나요?",
+      "answer": "Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드 키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스입니다.",
+      "question_id": "q_0_9",
+      "created_at": "2025-07-31 07:08:29"
+    },
+    {
+      "category": "전체",
+      "category_id": "category_2",
+      "question": "단속 카메라 및 안내 경로에 대한 오류 등이 발행하는 경우 어떤 조치를 취할 수 있나요?",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_1_0",
+      "created_at": "2025-07-31 07:08:32"
+    },
+    {
+      "category": "전체",
+      "category_id": "category_2",
+      "question": "기아 커넥트 스토어는 무엇이며, 어떻게 이용하나요?",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_1_1",
+      "created_at": "2025-07-31 07:08:33"
+    },
+    {
+      "category": "전체",
+      "category_id": "category_2",
+      "question": "모바일 내비게이션 대비 기아 내비게이션의 ‘도착 예정 시간’은 정확한가요?",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_1_2",
+      "created_at": "2025-07-31 07:08:34"
+    },
+    {
+      "category": "전체",
+      "category_id": "category_2",
+      "question": "모바일 내비게이션과 차별화 되는 기아 내비게이션만의 특장점은 무엇인가요?",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_1_3",
+      "created_at": "2025-07-31 07:08:34"
+    },
+    {
+      "category": "전체",
+      "category_id": "category_2",
+      "question": "내비게이션 외 클러스터와 헤드업 디스플레이도 무선 업데이트가 되나요?",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_1_4",
+      "created_at": "2025-07-31 07:08:35"
+    },
+    {
+      "category": "전체",
+      "category_id": "category_2",
+      "question": "내비게이션 무선 업데이트는 어떻게 이뤄지나요?",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_1_5",
+      "created_at": "2025-07-31 07:08:36"
+    },
+    {
+      "category": "전체",
+      "category_id": "category_2",
+      "question": "내비게이션 업데이트 주기가 어떻게 되나요?",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_1_6",
+      "created_at": "2025-07-31 07:08:36"
+    },
+    {
+      "category": "전체",
+      "category_id": "category_2",
+      "question": "빌트인 캠 USB메모리 저장버튼이 활성화가 안됩니다. 어떻게 해야 하나요?",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_1_7",
+      "created_at": "2025-07-31 07:08:37"
+    },
+    {
+      "category": "전체",
+      "category_id": "category_2",
+      "question": "빌트인 캠 업데이트를 하지 않으면 영상 녹화가 안되나요?",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_1_8",
+      "created_at": "2025-07-31 07:08:38"
+    },
+    {
+      "category": "전체",
+      "category_id": "category_2",
+      "question": "빌트인 캠 녹화영상 관리 방법이 궁금합니다.",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_1_9",
+      "created_at": "2025-07-31 07:08:39"
+    },
+    {
+      "category": "차량 구매",
+      "category_id": "category_3",
+      "question": "EV케어 프로그램이란 무엇인가요?",
+      "answer": "기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.",
+      "question_id": "q_2_0",
+      "created_at": "2025-07-31 07:08:41"
+    },
+    {
+      "category": "차량 구매",
+      "category_id": "category_3",
+      "question": "Kia EV 그린패스 요즘에는 어떤 서비스인가요?",
+      "answer": "기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.",
+      "question_id": "q_2_1",
+      "created_at": "2025-07-31 07:08:42"
+    },
+    {
+      "category": "차량 구매",
+      "category_id": "category_3",
+      "question": "광고성 정보 수신 동의 확인 문자/이메일을 받았습니다.",
+      "answer": "기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.",
+      "question_id": "q_2_2",
+      "created_at": "2025-07-31 07:08:43"
+    },
+    {
+      "category": "차량 구매",
+      "category_id": "category_3",
+      "question": "기아 전기차 구매시 보조금은 어떻게 되나요?",
+      "answer": "기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.",
+      "question_id": "q_2_3",
+      "created_at": "2025-07-31 07:08:44"
+    },
+    {
+      "category": "차량 구매",
+      "category_id": "category_3",
+      "question": "All-new Niro EV에 적용된 특화 기술은 어떤 게 있나요?",
+      "answer": "기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.",
+      "question_id": "q_2_4",
+      "created_at": "2025-07-31 07:08:44"
+    },
+    {
+      "category": "차량 구매",
+      "category_id": "category_3",
+      "question": "내 차 관리를 위한 필수 앱, MyKia는 어떤 서비스 인가요?",
+      "answer": "기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.",
+      "question_id": "q_2_5",
+      "created_at": "2025-07-31 07:08:45"
+    },
+    {
+      "category": "차량 구매",
+      "category_id": "category_3",
+      "question": "기아 표준 서비스 용품이 무엇인가요?",
+      "answer": "기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.",
+      "question_id": "q_2_6",
+      "created_at": "2025-07-31 07:08:46"
+    },
+    {
+      "category": "차량 구매",
+      "category_id": "category_3",
+      "question": "시승 신청은 어떻게 해야 하나요?",
+      "answer": "기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.",
+      "question_id": "q_2_7",
+      "created_at": "2025-07-31 07:08:46"
+    },
+    {
+      "category": "차량 구매",
+      "category_id": "category_3",
+      "question": "기아 통합 계정이 무엇인가요?",
+      "answer": "기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.",
+      "question_id": "q_2_8",
+      "created_at": "2025-07-31 07:08:47"
+    },
+    {
+      "category": "차량 구매",
+      "category_id": "category_3",
+      "question": "상승 내장탑차가 무엇인가요?",
+      "answer": "기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.",
+      "question_id": "q_2_9",
+      "created_at": "2025-07-31 07:08:48"
+    },
+    {
+      "category": "차량 정비",
+      "category_id": "category_4",
+      "question": "빌트인 캠 이벤트 알림을 설정했는데도 알림 메세지가 오지 않습니다. 어떻게 해야 하나요?",
+      "answer": "사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수 있습니다.",
+      "question_id": "q_3_9",
+      "created_at": "2025-07-31 07:08:57"
+    },
+    {
+      "category": "기아멤버스",
+      "category_id": "category_5",
+      "question": "기아멤버스 모바일카드 발급과 사용방법이 어떻게 되나요?",
+      "answer": "기아멤버스 모바일 카드는 기아멤버스 사이트 또는 Mykia 어플리케이션에 회원가입(카드회원까지 가입 필수)을 하시면 발급 받으실 수 있습니다.",
+      "question_id": "q_4_0",
+      "created_at": "2025-07-31 07:09:00"
+    },
+    {
+      "category": "기아멤버스",
+      "category_id": "category_5",
+      "question": "기아멤버스 카드를 모바일카드 or 실물 카드로 선택하여 받을 수 있나요?",
+      "answer": "기아멤버스 모바일 카드는 기아멤버스 사이트 또는 Mykia 어플리케이션에 회원가입(카드회원까지 가입 필수)을 하시면 발급 받으실 수 있습니다.",
+      "question_id": "q_4_1",
+      "created_at": "2025-07-31 07:09:00"
+    },
+    {
+      "category": "기아멤버스",
+      "category_id": "category_5",
+      "question": "기아멤버스 포인트 소멸 시점은 언제 인가요?",
+      "answer": "기아멤버스 모바일 카드는 기아멤버스 사이트 또는 Mykia 어플리케이션에 회원가입(카드회원까지 가입 필수)을 하시면 발급 받으실 수 있습니다.",
+      "question_id": "q_4_2",
+      "created_at": "2025-07-31 07:09:01"
+    },
+    {
+      "category": "기아멤버스",
+      "category_id": "category_5",
+      "question": "기아멤버스 카드를 분실했는데, 재발급 받기 전에 오토큐에서 포인트를 사용할 수 있습니까?",
+      "answer": "기아멤버스 모바일 카드는 기아멤버스 사이트 또는 Mykia 어플리케이션에 회원가입(카드회원까지 가입 필수)을 하시면 발급 받으실 수 있습니다.",
+      "question_id": "q_4_3",
+      "created_at": "2025-07-31 07:09:02"
+    },
+    {
+      "category": "홈페이지",
+      "category_id": "category_6",
+      "question": "기아 홈페이지 회원가입을 했으나 로그인이 되지 않습니다. 왜 그런가요?",
+      "answer": "정보통신망법 개정 및 회원 고객님의 개인정보보호를 위하여 홈페이지에 1년 이상 로그인하지 않는 경우, 회원정보의 보호 및 운영의 효율성을 위해 휴면계정으로 전환됩니다.",
+      "question_id": "q_5_0",
+      "created_at": "2025-07-31 07:09:05"
+    },
+    {
+      "category": "PBV",
+      "category_id": "category_7",
+      "question": "PBV란 무엇인가요?",
+      "answer": "PBV (Platform Beyond Vehicle) 는 '차량 그 이상의 플랫폼' 이라는 의미 그대로, 고객의 니즈를 기반으로 새로운 비즈니스와 라이프스타일을 제안함과 동시에 혁신성을 기반으로 최적의 모빌리티 경험을 제공하는 기아의 신규 비즈니스 모델입니다.",
+      "question_id": "q_6_0",
+      "created_at": "2025-07-31 07:09:07"
+    },
+    {
+      "category": "PBV",
+      "category_id": "category_7",
+      "question": "PBV의 생산은 어떻게 이루어지나요?",
+      "answer": "PBV (Platform Beyond Vehicle) 는 '차량 그 이상의 플랫폼' 이라는 의미 그대로, 고객의 니즈를 기반으로 새로운 비즈니스와 라이프스타일을 제안함과 동시에 혁신성을 기반으로 최적의 모빌리티 경험을 제공하는 기아의 신규 비즈니스 모델입니다.",
+      "question_id": "q_6_1",
+      "created_at": "2025-07-31 07:09:08"
+    },
+    {
+      "category": "PBV",
+      "category_id": "category_7",
+      "question": "PBV는 어떤 고객에 적합한가요?",
+      "answer": "PBV (Platform Beyond Vehicle) 는 '차량 그 이상의 플랫폼' 이라는 의미 그대로, 고객의 니즈를 기반으로 새로운 비즈니스와 라이프스타일을 제안함과 동시에 혁신성을 기반으로 최적의 모빌리티 경험을 제공하는 기아의 신규 비즈니스 모델입니다.",
+      "question_id": "q_6_2",
+      "created_at": "2025-07-31 07:09:09"
+    },
+    {
+      "category": "PBV",
+      "category_id": "category_7",
+      "question": "PBV와 상용차/LCV의 차이는 무엇인가요?",
+      "answer": "PBV (Platform Beyond Vehicle) 는 '차량 그 이상의 플랫폼' 이라는 의미 그대로, 고객의 니즈를 기반으로 새로운 비즈니스와 라이프스타일을 제안함과 동시에 혁신성을 기반으로 최적의 모빌리티 경험을 제공하는 기아의 신규 비즈니스 모델입니다.",
+      "question_id": "q_6_3",
+      "created_at": "2025-07-31 07:09:10"
+    },
+    {
+      "category": "PBV",
+      "category_id": "category_7",
+      "question": "출시 예정일은 어떻게 되나요?",
+      "answer": "PBV (Platform Beyond Vehicle) 는 '차량 그 이상의 플랫폼' 이라는 의미 그대로, 고객의 니즈를 기반으로 새로운 비즈니스와 라이프스타일을 제안함과 동시에 혁신성을 기반으로 최적의 모빌리티 경험을 제공하는 기아의 신규 비즈니스 모델입니다.",
+      "question_id": "q_6_4",
+      "created_at": "2025-07-31 07:09:10"
+    },
+    {
+      "category": "PBV",
+      "category_id": "category_7",
+      "question": "Kia PBV 플랫폼만의 특성은 무엇인가요?",
+      "answer": "PBV (Platform Beyond Vehicle) 는 '차량 그 이상의 플랫폼' 이라는 의미 그대로, 고객의 니즈를 기반으로 새로운 비즈니스와 라이프스타일을 제안함과 동시에 혁신성을 기반으로 최적의 모빌리티 경험을 제공하는 기아의 신규 비즈니스 모델입니다.",
+      "question_id": "q_6_5",
+      "created_at": "2025-07-31 07:09:11"
+    },
+    {
+      "category": "PBV",
+      "category_id": "category_7",
+      "question": "충전 인프라는 준비되고 있나요?",
+      "answer": "PBV (Platform Beyond Vehicle) 는 '차량 그 이상의 플랫폼' 이라는 의미 그대로, 고객의 니즈를 기반으로 새로운 비즈니스와 라이프스타일을 제안함과 동시에 혁신성을 기반으로 최적의 모빌리티 경험을 제공하는 기아의 신규 비즈니스 모델입니다.",
+      "question_id": "q_6_6",
+      "created_at": "2025-07-31 07:09:12"
+    },
+    {
+      "category": "PBV",
+      "category_id": "category_7",
+      "question": "기아가 생각하는 PBV 시장의 규모와 판매 목표는 어느 정도인가요?",
+      "answer": "PBV (Platform Beyond Vehicle) 는 '차량 그 이상의 플랫폼' 이라는 의미 그대로, 고객의 니즈를 기반으로 새로운 비즈니스와 라이프스타일을 제안함과 동시에 혁신성을 기반으로 최적의 모빌리티 경험을 제공하는 기아의 신규 비즈니스 모델입니다.",
+      "question_id": "q_6_7",
+      "created_at": "2025-07-31 07:09:12"
+    },
+    {
+      "category": "PBV",
+      "category_id": "category_7",
+      "question": "최근 전기차 시장의 성장속도가 둔화되는 상황에서 기아 PBV의 대응 전략은 무엇인가요?",
+      "answer": "PBV (Platform Beyond Vehicle) 는 '차량 그 이상의 플랫폼' 이라는 의미 그대로, 고객의 니즈를 기반으로 새로운 비즈니스와 라이프스타일을 제안함과 동시에 혁신성을 기반으로 최적의 모빌리티 경험을 제공하는 기아의 신규 비즈니스 모델입니다.",
+      "question_id": "q_6_8",
+      "created_at": "2025-07-31 07:09:13"
+    },
+    {
+      "category": "PBV",
+      "category_id": "category_7",
+      "question": "기아가 PBV를 통해 추구하는 미래 모빌리티의 궁극적 지향점은 무엇인가요?",
+      "answer": "PBV (Platform Beyond Vehicle) 는 '차량 그 이상의 플랫폼' 이라는 의미 그대로, 고객의 니즈를 기반으로 새로운 비즈니스와 라이프스타일을 제안함과 동시에 혁신성을 기반으로 최적의 모빌리티 경험을 제공하는 기아의 신규 비즈니스 모델입니다.",
+      "question_id": "q_6_9",
+      "created_at": "2025-07-31 07:09:14"
+    },
+    {
+      "category": "기타",
+      "category_id": "category_8",
+      "question": "기아 커넥트 스토어는 무엇이며, 어떻게 이용하나요?",
+      "answer": "차량 구매 순간의 선택이 카 라이프의 전부를 결정한 것은 아닙니다.",
+      "question_id": "q_7_0",
+      "created_at": "2025-07-31 07:09:17"
+    },
+    {
+      "category": "기타",
+      "category_id": "category_8",
+      "question": "완속 충전 케이블은 언제 사용하나요?",
+      "answer": "차량 구매 순간의 선택이 카 라이프의 전부를 결정한 것은 아닙니다.",
+      "question_id": "q_7_1",
+      "created_at": "2025-07-31 07:09:17"
+    },
+    {
+      "category": "기타",
+      "category_id": "category_8",
+      "question": "완속과 급속 충전기는 어떻게 구분하나요?",
+      "answer": "차량 구매 순간의 선택이 카 라이프의 전부를 결정한 것은 아닙니다.",
+      "question_id": "q_7_2",
+      "created_at": "2025-07-31 07:09:18"
+    },
+    {
+      "category": "기타",
+      "category_id": "category_8",
+      "question": "충전카드는 어떻게 발급받아야 하나요?",
+      "answer": "차량 구매 순간의 선택이 카 라이프의 전부를 결정한 것은 아닙니다.",
+      "question_id": "q_7_3",
+      "created_at": "2025-07-31 07:09:19"
+    },
+    {
+      "category": "기타",
+      "category_id": "category_8",
+      "question": "결제방식은 어떻게 되나요?",
+      "answer": "차량 구매 순간의 선택이 카 라이프의 전부를 결정한 것은 아닙니다.",
+      "question_id": "q_7_4",
+      "created_at": "2025-07-31 07:09:19"
+    },
+    {
+      "category": "기타",
+      "category_id": "category_8",
+      "question": "급속충전기는 어떠한 사용제약이 있나요?",
+      "answer": "차량 구매 순간의 선택이 카 라이프의 전부를 결정한 것은 아닙니다.",
+      "question_id": "q_7_5",
+      "created_at": "2025-07-31 07:09:20"
+    }
+  ]
+}
