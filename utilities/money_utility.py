@@ -2,16 +2,15 @@ import pandas as pd
 import numpy as np
 from database.database import connect_db
 
-def get_announcement_data():
-    """
-    공고 현황 데이터를 가져오는 함수
-    """
+def get_announcement_data(vehicle_type="electric"):
     try:
         conn = connect_db()
         cursor = conn.cursor()
+
+        table_name = "electronic_car" if vehicle_type == "electric" else "hydrogen_car"
         
         # electronic_car 테이블에서 공고 현황 데이터 가져오기
-        query = """
+        query = f"""
         SELECT 
             년도 as year,
             지역 as region,
@@ -19,7 +18,7 @@ def get_announcement_data():
             민간공고대수 as announced_count,
             출고대수 as released_count,
             출고잔여대수 as remaining_count
-        FROM electronic_car 
+        FROM {table_name}
         WHERE 년도 BETWEEN 2020 AND 2024
         ORDER BY 년도, 지역
         """
