@@ -60,21 +60,20 @@ def get_subsidy_data(vehicle_type):
         cursor = conn.cursor()
         
         if vehicle_type == "electric":
-            # 전기차 보조금 정보 (electronic_car 테이블 사용)
+            # 전기차 보조금 정보 (money_electronic_car 테이블 사용)
             query = """
             SELECT 
-                지역 as region,
-                차종 as vehicle_type,
-                민간공고대수 as national_subsidy,
-                출고대수 as local_subsidy
-            FROM electronic_car 
-            WHERE 년도 = 2024
-            ORDER BY 지역
+                시도 as region,
+                모델명 as vehicle_type,
+                CAST(REPLACE(보조금(만원), ',', '') AS SIGNED) as total_subsidy
+            FROM money_electronic_car 
+            WHERE 시도 NOT LIKE '%합계%' AND 모델명 NOT LIKE '%합계%'
+            ORDER BY total_subsidy DESC
             """
             
             cursor.execute(query)
             data = cursor.fetchall()
-            columns = ['region', 'vehicle_type', 'national_subsidy', 'local_subsidy']
+            columns = ['region', 'vehicle_type', 'total_subsidy']
             df = pd.DataFrame(data, columns=columns)
             
             if df.empty:
@@ -82,27 +81,26 @@ def get_subsidy_data(vehicle_type):
             
             # 컬럼명 변경
             df = df.rename(columns={
-                'region': '지역',
-                'vehicle_type': '차종',
-                'national_subsidy': '민간공고대수',
-                'local_subsidy': '출고대수'
+                'region': '시도',
+                'vehicle_type': '모델명',
+                'total_subsidy': '보조금(만원)'
             })
             
         elif vehicle_type == "hydrogen":
-            # 수소차 보조금 정보 (hydrogen_car 테이블 사용)
+            # 수소차 보조금 정보 (money_hydrogen_car 테이블 사용)
             query = """
             SELECT 
-                지역 as region,
-                차종 as vehicle_type,
-                CAST(민간공고대수 AS SIGNED) as subsidy_amount
-            FROM hydrogen_car 
-            WHERE 년도 = 2024
-            ORDER BY 지역
+                시도 as region,
+                모델명 as vehicle_type,
+                CAST(REPLACE(보조금(만원), ',', '') AS SIGNED) as total_subsidy
+            FROM money_hydrogen_car 
+            WHERE 시도 NOT LIKE '%합계%' AND 모델명 NOT LIKE '%합계%'
+            ORDER BY total_subsidy DESC
             """
             
             cursor.execute(query)
             data = cursor.fetchall()
-            columns = ['region', 'vehicle_type', 'subsidy_amount']
+            columns = ['region', 'vehicle_type', 'total_subsidy']
             df = pd.DataFrame(data, columns=columns)
             
             if df.empty:
@@ -110,9 +108,9 @@ def get_subsidy_data(vehicle_type):
             
             # 컬럼명 변경
             df = df.rename(columns={
-                'region': '지역',
-                'vehicle_type': '차종',
-                'subsidy_amount': '민간공고대수'
+                'region': '시도',
+                'vehicle_type': '모델명',
+                'total_subsidy': '보조금(만원)'
             })
         
         cursor.close()
@@ -123,7 +121,7 @@ def get_subsidy_data(vehicle_type):
         print(f"데이터베이스 연결 오류: {e}")
         return None
 
-def get_top5_models(region):
+def get_top5_models(region, vehicle_type="electric"):
     """
     지역별 TOP5 모델 정보를 가져오는 함수
     """
@@ -131,34 +129,37 @@ def get_top5_models(region):
         conn = connect_db()
         cursor = conn.cursor()
         
+        # 테이블 선택
+        table_name = "money_electronic_car" if vehicle_type == "electric" else "money_hydrogen_car"
+        
         if region == "전체":
-            # 전체 지역 TOP5 (electronic_car 테이블 사용)
-            query = """
+            # 전체 지역 TOP5 - 보조금 기준으로 정렬
+            query = f"""
             SELECT 
-                지역 as region,
-                차종 as vehicle_type,
-                민간공고대수 as subsidy_amount
-            FROM electronic_car 
-            WHERE 년도 = 2024
-            ORDER BY 민간공고대수 DESC
+                시도 as region,
+                모델명 as vehicle_type,
+                CAST(REPLACE(보조금(만원), ',', '') AS SIGNED) as total_subsidy
+            FROM {table_name}
+            WHERE 시도 NOT LIKE '%합계%' AND 모델명 NOT LIKE '%합계%'
+            ORDER BY total_subsidy DESC
             LIMIT 5
             """
         else:
-            # 특정 지역 TOP5
+            # 특정 지역 TOP5 - 보조금 기준으로 정렬
             query = f"""
             SELECT 
-                지역 as region,
-                차종 as vehicle_type,
-                민간공고대수 as subsidy_amount
-            FROM electronic_car 
-            WHERE 년도 = 2024 AND 지역 = '{region}'
-            ORDER BY 민간공고대수 DESC
+                시도 as region,
+                모델명 as vehicle_type,
+                CAST(REPLACE(보조금(만원), ',', '') AS SIGNED) as total_subsidy
+            FROM {table_name}
+            WHERE 시도 = '{region}' AND 시도 NOT LIKE '%합계%' AND 모델명 NOT LIKE '%합계%'
+            ORDER BY total_subsidy DESC
             LIMIT 5
             """
         
         cursor.execute(query)
         data = cursor.fetchall()
-        columns = ['region', 'vehicle_type', 'subsidy_amount']
+        columns = ['region', 'vehicle_type', 'total_subsidy']
         df = pd.DataFrame(data, columns=columns)
         
         cursor.close()
@@ -167,15 +168,15 @@ def get_top5_models(region):
         if df.empty:
             return None
         
-        # 순위 추가
+        # 순위 추가 (보조금 기준으로 이미 정렬되어 있음)
         df['rank'] = range(1, len(df) + 1)
         
         # 컬럼명 변경
         df = df.rename(columns={
             'rank': '순위',
-            'region': '지역',
-            'vehicle_type': '차종',
-            'subsidy_amount': '민간공고대수'
+            'region': '시도',
+            'vehicle_type': '모델명',
+            'total_subsidy': '보조금(만원)'
         })
         
         return df

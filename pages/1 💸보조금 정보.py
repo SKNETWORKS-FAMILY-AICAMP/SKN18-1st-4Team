@@ -103,48 +103,47 @@ with tab2:
             all_data.index = all_data.index + 1
             all_data.index.name = '순위'
             
-            # 표시용 복사본 생성(숫자는 그대로 두고 출력 전만 포맷팅)
-            display_all_data = all_data.copy()
+            # 보조금 컬럼에 쉼표 추가하여 표시
             all_data['보조금(만원)'] = all_data['보조금(만원)'].apply(lambda x: f"{x:,}")
             
-            # 전체 데이터 표시
             st.dataframe(all_data, use_container_width=True)
             
             # 지역별 보조금 Top 5
-            if '보조금(만원)' in display_all_data.columns and '시도' in display_all_data.columns:
+            if '보조금(만원)' in all_data.columns and '시도' in all_data.columns:
                 st.subheader("지역별 보조금 Top 5")
                 
                 # 모든 지역을 드롭다운으로 선택
-                all_regions = sorted(display_all_data['시도'].unique())
+                all_regions = sorted(all_data['시도'].unique())
                 selected_region = st.selectbox(
                     "지역 선택:",
                     options=all_regions
                 )
                 
                 # 선택된 지역의 데이터 필터링
-                selected_region_data = display_all_data[display_all_data['시도'] == selected_region]
+                selected_region_data = all_data[all_data['시도'] == selected_region].copy()
                 
                 if not selected_region_data.empty:
-                    # 중복값 제거 (순위 컬럼 제외한 모든 컬럼 기준)
+                    # 중복값 제거
                     selected_region_data = selected_region_data.drop_duplicates()
                     
+                    # 보조금을 숫자로 변환 (쉼표 제거 후)
+                    selected_region_data['보조금(만원)_숫자'] = selected_region_data['보조금(만원)'].str.replace(',', '').astype(int)
+                    
                     # 보조금 내림차순으로 정렬하여 상위 5개 선택
-                    top5_data = selected_region_data.sort_values('보조금(만원)', ascending=False).head(5)
+                    top5_data = selected_region_data.sort_values('보조금(만원)_숫자', ascending=False).head(5)
+                    
+                    # 숫자 컬럼 제거하고 원래 보조금 컬럼만 유지
+                    top5_data = top5_data.drop(columns=['보조금(만원)_숫자'])
                     
                     # 인덱스를 1부터 시작하는 순번으로 변경
                     top5_data = top5_data.reset_index(drop=True)
                     top5_data.index = top5_data.index + 1
                     top5_data.index.name = '순위'
-
-                    top5_data['보조금(만원)'] = top5_data['보조금(만원)'].map(lambda x: f"{x:,}")
                     
                     st.dataframe(top5_data, use_container_width=True)
                     
                 else:
                     st.warning(f"{selected_region} 지역에 데이터가 없습니다.")
-
-                    
-            
         
         else:
             st.error(f"{table_name} 테이블이 존재하지 않습니다.")
