@@ -147,7 +147,7 @@ with tab1:
             elif highlight_option == "수소차":
                 y_max = 5
             elif highlight_option == "하이브리드":
-                y_max = 80
+                y_max = 100
             
             fig_detail.update_layout(
                 title=f"{highlight_option} 연도별 비율 변화",
