@@ -33,12 +33,22 @@ SKN18-1st-4Team
 ### 2.2 데이터베이스 구조
 - **데이터베이스명**: car
 - **주요 테이블**:
-  - `electronic_car`: 전기차 정보 (국가보조금, 지자체보조금) 테이블 
-  - `hydrogen_car`: 수소차 정보 (지원금) 테이블
+  - `electronic_car`: 전기차 테이블 
+  - `hydrogen_car`: 수소차 테이블
   - `environmental_vehicles` : 친환경 자동차 연도별 데이터 테이블 (수소차,전기차,하이브리드, 합계)
   - `greenhouse_gases` - 온실가스 배출량 관련 테이블
-  - `faq` - faq 질문들 테이블
+  - `money_electronic_car` - 전기 자동차 보조금 테이블
+  - `money_hydrogen_car` - 수소 자동차 보조금 테이블
+
+  ### 2.3 RDB
   
+
+
+
+
+
+
+
   
 
 ## 3. 페이지별 상세 기획
