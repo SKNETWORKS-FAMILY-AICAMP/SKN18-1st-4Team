@@ -42,6 +42,7 @@ SKN18-1st-4Team
 
   ### 2.3 RDB
   
+<img width="1603" height="796" alt="ERD" src="https://github.com/user-attachments/assets/9ad51827-f9a7-4e67-8c6a-80fbe3216e3c" />
 
 
 
