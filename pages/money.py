@@ -68,6 +68,88 @@ with tab1:
 with tab2:
     st.header("보조금 정보")
 
+    # 차종 선택
+    car_type = st.selectbox("차종 선택:", ["전기차", "수소차"], key = "elect_hydrogen")
+
+    # 테이블명 결정
+    table_name = "money_electronic_car" if car_type == "전기차" else "money_hydrogen_car"
+    vehicle_name = "전기차" if car_type == "전기차" else "수소차"
+
+    try:
+        conn = connect_db()
+        cursor = conn.cursor()
+        
+        # 테이블 존재 여부 확인
+        cursor.execute(f"SHOW TABLES LIKE '{table_name}'")
+        table_exists = cursor.fetchone()
+        
+        if table_exists:
+            # 전체 데이터 조회
+            st.subheader(f"{vehicle_name} 전체 데이터")
+            all_data = pd.read_sql(f"SELECT * FROM {table_name} WHERE 시도 NOT LIKE '%합계%' AND 모델명 NOT LIKE '%합계%'", conn)
+            
+            # 보조금 컬럼에서 쉼표 제거 후 int로 변환
+            all_data['보조금(만원)'] = all_data['보조금(만원)'].str.replace(',', '').astype(str)
+            all_data['보조금(만원)'] = pd.to_numeric(all_data['보조금(만원)'], errors='coerce').fillna(0).astype(int)
+            
+            # 국비(만원), 지방비(만원) 컬럼 삭제
+            all_data = all_data.drop(columns=['국비(만원)', '지방비(만원)'])
+            
+            # 보조금 내림차순으로 정렬
+            all_data = all_data.sort_values('보조금(만원)', ascending=False)
+            
+            # 인덱스를 1부터 시작하는 순번으로 변경
+            all_data = all_data.reset_index(drop=True)
+            all_data.index = all_data.index + 1
+            all_data.index.name = '순위'
+            
+            # 보조금 컬럼에 쉼표 추가하여 표시
+            all_data['보조금(만원)'] = all_data['보조금(만원)'].apply(lambda x: f"{x:,}")
+            
+            st.dataframe(all_data, use_container_width=True)
+            
+            # 지역별 보조금 Top 5
+            if '보조금(만원)' in all_data.columns and '시도' in all_data.columns:
+                st.subheader("지역별 보조금 Top 5")
+                
+                # 모든 지역을 드롭다운으로 선택
+                all_regions = sorted(all_data['시도'].unique())
+                selected_region = st.selectbox(
+                    "지역 선택:",
+                    options=all_regions
+                )
+                
+                # 선택된 지역의 데이터 필터링
+                selected_region_data = all_data[all_data['시도'] == selected_region]
+                
+                if not selected_region_data.empty:
+                    # 중복값 제거 (순위 컬럼 제외한 모든 컬럼 기준)
+                    selected_region_data = selected_region_data.drop_duplicates()
+                    
+                    # 보조금 내림차순으로 정렬하여 상위 5개 선택
+                    top5_data = selected_region_data.sort_values('보조금(만원)', ascending=False).head(5)
+                    
+                    # 인덱스를 1부터 시작하는 순번으로 변경
+                    top5_data = top5_data.reset_index(drop=True)
+                    top5_data.index = top5_data.index + 1
+                    top5_data.index.name = '순위'
+                    
+                    st.dataframe(top5_data, use_container_width=True)
+                    
+                else:
+                    st.warning(f"{selected_region} 지역에 데이터가 없습니다.")
+        
+        else:
+            st.error(f"{table_name} 테이블이 존재하지 않습니다.")
+            st.info("데이터베이스에 해당 테이블이 있는지 확인해주세요.")
+        
+        cursor.close()
+        conn.close()
+        
+    except Exception as e:
+        st.error(f"데이터베이스 연결 또는 데이터 조회 실패: {e}")
+        st.info("데이터베이스 연결 상태와 테이블 존재 여부를 확인해주세요.")
+
 
 # -------------------------지역별 정책 활용 현황---------------------------------------------------
 with tab3:
@@ -101,7 +183,7 @@ with tab3:
         # --- 지역별 데이터 합산 ---
         region_summary = (df.groupby("region", as_index=False)
                             .agg(announced_count=("announced_count", "sum"),
-                                 remaining_count=("remaining_count", "sum")))
+                                remaining_count=("remaining_count", "sum")))
         region_summary["released_count"] = (region_summary["announced_count"] - region_summary["remaining_count"]).clip(lower=0)
 
         safe_den = region_summary["announced_count"].replace(0, np.nan)

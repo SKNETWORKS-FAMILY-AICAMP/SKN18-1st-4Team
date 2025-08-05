@@ -26,7 +26,6 @@ with tab1:
     
     if vehicle_data is not None and not vehicle_data.empty:
         # 차종별 하이라이트 기능
-        st.subheader("차종별 하이라이트")
         highlight_option = st.selectbox(
             "하이라이트할 차종을 선택하세요:",
             ["전체", "전기차", "수소차", "하이브리드"]
@@ -45,7 +44,7 @@ with tab1:
                     x=vehicle_data['year'],
                     y=vehicle_data['total_vehicles'],
                     name="전체 자동차 등록대수",
-                    line=dict(color='blue', width=3),
+                    line=dict(color="#ffafcc", width=3),
                     mode='lines+markers'
                 ),
                 secondary_y=False
@@ -58,7 +57,7 @@ with tab1:
                     x=vehicle_data['year'],
                     y=vehicle_data['electric_vehicles'],
                     name="전기차",
-                    marker_color='green',
+                    marker_color='#0096c7',
                     marker_opacity=1.0,
                     hovertemplate='전기차: %{y:,.0f}대<br>비율: %{customdata:.1f}%<extra></extra>',
                     customdata=vehicle_data['electric_ratio']
@@ -71,7 +70,7 @@ with tab1:
                     x=vehicle_data['year'],
                     y=vehicle_data['hydrogen_vehicles'],
                     name="수소차",
-                    marker_color='orange',
+                    marker_color='#00b4d8',
                     marker_opacity=1.0,
                     hovertemplate='수소차: %{y:,.0f}대<br>비율: %{customdata:.1f}%<extra></extra>',
                     customdata=vehicle_data['hydrogen_ratio']
@@ -84,7 +83,7 @@ with tab1:
                     x=vehicle_data['year'],
                     y=vehicle_data['hybrid_vehicles'],
                     name="하이브리드",
-                    marker_color='purple',
+                    marker_color='#ade8f4',
                     marker_opacity=1.0,
                     hovertemplate='하이브리드: %{y:,.0f}대<br>비율: %{customdata:.1f}%<extra></extra>',
                     customdata=vehicle_data['hybrid_ratio']
@@ -130,6 +129,13 @@ with tab1:
             elif highlight_option == "하이브리드":
                 selected_data = vehicle_data['hybrid_vehicles']
                 selected_ratio = vehicle_data['hybrid_ratio']
+
+
+            color_map = {
+                "전기차": "#0096c7",
+                "수소차": "#00b4d8",
+                "하이브리드": "#ade8f4"
+            }
             
             # 선택된 차종의 연도별 변화 그래프
             fig_detail = go.Figure()
@@ -137,7 +143,7 @@ with tab1:
                 x=vehicle_data['year'],
                 y=selected_ratio,  # 등록대수 대신 비율 사용
                 name=highlight_option,
-                marker_color='red',
+                marker_color=color_map.get(highlight_option),
                 hovertemplate=f'{highlight_option} 비율: %{{y:.1f}}%<extra></extra>'
             ))
             
@@ -189,7 +195,7 @@ with tab2:
                 x=env_data['year'],
                 y=env_data['greenhouse_gas'],
                 name="온실가스 배출량",
-                line=dict(color='red', width=3),
+                line=dict(color='#8a9a5b', width=3),
                 mode='lines+markers'
             ),
             secondary_y=True
@@ -201,7 +207,7 @@ with tab2:
                 x=env_data['year'],
                 y=env_data['eco_vehicle_ratio'],
                 name="친환경 자동차 비율",
-                marker_color='lightgreen',
+                marker_color= '#a4de02',
                 hovertemplate='친환경차 비율: %{y:.1f}%<extra></extra>'
             ),
             secondary_y=False
@@ -270,7 +276,7 @@ with tab2:
                     x=region_gas_data['region'],
                     y=region_gas_data['total_gas'],
                     name='총 온실가스 배출량',
-                    marker_color='orange',
+                    marker_color='#8a9a5b',
                     hovertemplate='지역: %{x}<br>배출량: %{y:,}<extra></extra>'
                 ))
                 
