@@ -6,6 +6,7 @@ import pandas as pd
 from database.database import connect_db
 from utilities.app_utility import get_vehicle_registration_data, get_environmental_impact_data
 
+
 # 페이지 설정
 st.set_page_config(
     page_title="친환경 자동차 대시보드",
